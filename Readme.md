@@ -15,3 +15,8 @@
 | Command to check volumes | `docker volume ls` |
 | Command to remove volumes along with container | `docker rm node-app-con -fv` |
 | Command to remove container | `docker rm node-app-con -f` |
+| Command to run docker compose up | `docker-compose up` |
+| Command to run docker compose up in detached mode | `docker-compose up -d` |
+| Command to run docker compose up with recreation of image because when you change the dockerfile , docker compse will not automatically know there is a change | `docker-compose up --build -d` |
+| Command to run docker compose down | `docker-compose down` |
+| Command to run docker compose down along with removing volumes | `docker-compose down -v` |

@@ -1,0 +1,15 @@
+version: "3"
+services:
+  node-app:
+    # The below build will override the build in docker-composer.yml file
+    # and the build.args.NODE_ENV will be used in Dockerfile ARG NODE_ENV value
+    build:
+      context: .
+      args:
+        NODE_ENV: development
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev

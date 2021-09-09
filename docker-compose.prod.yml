@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node-app:
+    # The below build will override the build in docker-composer.yml file
+    # and the build.args.NODE_ENV will be used in Dockerfile ARG NODE_ENV value
+    build:
+      context: .
+      args:
+        NODE_ENV: production
+    environment:
+      - NODE_ENV=production
+    command: node index.js

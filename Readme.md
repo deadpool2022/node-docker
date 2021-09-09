@@ -20,3 +20,7 @@
 | Command to run docker compose up with recreation of image because when you change the dockerfile , docker compse will not automatically know there is a change | `docker-compose up --build -d` |
 | Command to run docker compose down | `docker-compose down` |
 | Command to run docker compose down along with removing volumes | `docker-compose down -v` |
+| Command to run docker compose up with dev requirements | `docker-compose -f ./docker-compose.yml -f ./docker-compose.dev.yml up --build -d` |
+| Command to run docker compose up with prod requirements | `docker-compose -f ./docker-compose.yml -f ./docker-compose.prod.yml up --build -d` |
+| Command to run docker compose down with dev requirements | `docker-compose -f ./docker-compose.yml -f ./docker-compose.dev.yml down -v` |
+| Command to run docker compose down with prod requirements | `docker-compose -f ./docker-compose.yml -f ./docker-compose.prod.yml down -v` |

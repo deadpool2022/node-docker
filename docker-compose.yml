@@ -1,13 +1,11 @@
 version: "3"
-services:
+services: 
   node-app:
     build: .
-    ports:
+    #you should not put (ports:) in docker-compose.yml file if the dev and prod ports are different
+    ports: 
       - "3000:3000"
-    volumes: 
-      - ./:/app
-      - /app/node_modules
-    environment:
+    environment: 
       - PORT=3000
-    # env_file:
-    #   - ./.env
+
+#Note:- these variables are shared between dev and prod

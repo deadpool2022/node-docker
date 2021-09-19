@@ -26,7 +26,7 @@
 | Command to run docker compose down with prod requirements | `docker-compose -f ./docker-compose.yml -f ./docker-compose.prod.yml down -v` |
 | Command to inspect docker container | `docker inspect <container id or container name>` |
 | Command to inspect docker network | `docker network inspect <network id or network name>` |
-
+| Command to start only one service without starting other services | `docker-compose -f ./docker-compose.yml -f ./docker-compose.dev.yml up -d --no-deps node-app`|
 
 
 
@@ -37,3 +37,4 @@
   - `mongoose.connect("mongodb://vikas:password@mongo:27017?authSource=admin")
 .then(() => console.log('connected to database successfully'))
 .catch((e) => console.log(e));`
+- when you use `depends_on` it will spin up these containers first and spins up other containers after this.

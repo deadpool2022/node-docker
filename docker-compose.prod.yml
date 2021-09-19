@@ -9,4 +9,12 @@ services:
         NODE_ENV: production
     environment:
       - NODE_ENV=production
+      - MONGO_USER=vikas_prod
+      - MONGO_PASSWORD=password_prod
     command: node index.js
+
+  mongo:
+    image: mongo
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=vikas_prod
+      - MONGO_INITDB_ROOT_PASSWORD=password_prod

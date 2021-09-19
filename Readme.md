@@ -24,3 +24,8 @@
 | Command to run docker compose up with prod requirements | `docker-compose -f ./docker-compose.yml -f ./docker-compose.prod.yml up --build -d` |
 | Command to run docker compose down with dev requirements | `docker-compose -f ./docker-compose.yml -f ./docker-compose.dev.yml down -v` |
 | Command to run docker compose down with prod requirements | `docker-compose -f ./docker-compose.yml -f ./docker-compose.prod.yml down -v` |
+
+
+# Notes
+- use volumes to store persistent data
+- do not use `-v` along with `down` when volumes are defined, other wise using `-v` with `down` will delete name volumes also

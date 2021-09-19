@@ -7,5 +7,13 @@ services:
       - "3000:3000"
     environment: 
       - PORT=3000
+  mongo:
+    image: mongo
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=vikas
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes: 
+      - mongo-db:/data/db
 
-#Note:- these variables are shared between dev and prod
+volumes: 
+  mongo-db:
